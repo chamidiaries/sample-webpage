@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<style>
+button.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+button.casestudy {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\02795';
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2796";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+}
+
+div.panel.show {
+    opacity: 10;
+    max-height: 500px;  
+}
+
+div.main {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+</style>
+</head>
+<body>
+
+<h2><center>DevOps Case Study Template</center></h2>
+<div class="main">
+<button class="accordion">Overview</button>
+<div class="panel">
+<p>The DevOps Case Study is a collection of Accenture Clients who adopted the DevOps approach to deliver software by means of Continuous Integration and Delivery. </p>
+<p>This page shows feedback from the projects on how DevOps helped them in terms of business improvements, cost and time savings, as well as innovations that were employed.</p>
+</div>
+
+<button class="accordion">Submission Process</button>
+<div class="panel">
+<p>We would like to hear your story about how DevOps changed the way you deliver software in a positive way. </p>
+<p>Share your project's success with us by following these simple steps:</p>
+	<div class="row">
+		<div class="col-sm-4">
+		  <p>1. Download the following template:</p> <p><a href ="..\DevOps\files\Case Study Template v1.xlsx">Case Study Template v1</a></p>
+		</div>
+		<div class="col-sm-4">
+		  <p>2. Accomplish the template by answering the questions and providing additional informations.</p>
+		</div>
+		<div class="col-sm-4">    
+		  <p>3. Send the accomplished form together with other supporting materials to us.</p>
+		</div>
+	</div>
+</div>
+
+<button class="casestudy">Case Study</button>
+<div>
+<p></br><div class="container">
+  <h3>Add New Case Study</h3>
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">Project Name:</label>
+      <div class="col-sm-10">
+        <input type="projName" class="form-control" id="projName" placeholder="Enter Project Name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Industry Group:</label>
+      <div class="col-sm-10">          
+        <input type="ig" class="form-control" id="ig" placeholder="Enter Industry Group">
+      </div>
+    </div>
+	<div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">DevOps Offered:</label>
+       <div class="col-sm-10">   
+			<div class="radio">
+			  <label><input type="radio" name="optradio">Option 1</label>
+			</div>
+			<div class="radio">
+			  <label><input type="radio" name="optradio">Option 2</label>
+			</div>
+			<div class="radio">
+			  <label><input type="radio" name="optradio">Option 3</label>
+			</div>
+		</div>
+    </div>
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-default">Submit</button>
+      </div>
+    </div>
+  </form>
+</div></p>
+<p>
+<table class="table">
+    <thead>
+      <tr>
+        <th>Project Name</th>
+        <th>Industry Group</th>
+        <th>DevOps Offered</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Pokemon</td>
+        <td>CMT</td>
+        <td>Versioning, Deployment, Testing</td>
+      </tr>
+      <tr>
+        <td>Oracle</td>
+        <td>Resources</td>
+        <td>Versioning, Deployment</td>
+      </tr>
+    </tbody>
+  </table>
+</p>
+</div>
+</div>
+<!--Bootsrap core Javascript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script>
+//for accordion --start--
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+    acc[i].onclick = function(){
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+  }
+}
+//for accordion --end--
+</script>
+
+</body>
+</html>
